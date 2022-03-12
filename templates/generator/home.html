@@ -1,0 +1,39 @@
+{% extends 'generator/base.html' %}
+
+{% block title %}Contact {% endblock title %}
+{% block body %}
+<div class = 'container form-group mb-3 my-2' style="padding-bottom:2%; margin-bottom: -30rem!important;" >
+    <img src="/static/4th.jfif" class="img-fluid gx-3" alt="Responsive image" height="00px">
+</div> 
+
+
+<div class="container form-group" align ='center'>
+<h2 align = 'center' style="color:goldenrod;">Generate Your Password</h2>
+
+
+<form action='password' style="margin-bottom: 5%;">
+  <br>
+  <input type="number" name="length"  placeholder="Exp:- 8" ><a style="color: rgb(253, 4, 4);  "><b>  Enter length of Password</b> </a> 
+  
+  <br>
+  <br>
+  <input type="checkbox" name="uppercase"><b style="color: rgb(253, 4, 4); "> Uppercase</b> 
+  <br>
+  <br>
+
+  <input type="checkbox" name="numbers"><b style="color:   rgb(253, 4, 4);"> Numbers</b> 
+  <br>
+  <br>
+
+  <input type="checkbox" name="special"><b style="color:   rgb(253, 4, 4);"> Special Characters</b> 
+  <br>
+  <br>
+
+  <input type="submit" value="Generate Password" class="btn btn-primary">
+  <br>
+
+</form> 
+
+</div>
+
+{% endblock body %}

@@ -1,0 +1,40 @@
+{% extends 'generator/base.html' %}
+
+{% block title %}Contact {% endblock title %}
+{% block body %}
+<div class = 'container form-group mb-3 my-2'>
+<img src="/static/1st.jfif" class="img-fluid" alt="...">
+</div> 
+<h2 align = 'center'>Contact Us</h2>
+<form method = 'post' action ='/contact' style="margin-bottom: 5%;" >
+{% csrf_token %}
+<div class="container form-group">
+  <div class="col">
+  <label for="name" class="form-label">Name*</label>
+    <input type="text" class="form-control" id='Name'required dir ='auto' data-initial-dir='auto' placeholder="Enter your name" name ='Name' aria-label="First name">
+  </div>
+  
+<div class="mb-3 form-group">
+  <label for="name" name ='name' class="form-label">Email address*</label>
+  <input type="email" name='Email' class="form-control" id="Email" placeholder="name@example.com" required dir ='auto' data-initial-dir='auto'>
+</div>
+<div class="mb-3 form-group">
+  <label for="Phone" name ='Phone' class="form-label">Contact Number*</label>
+  <input type="Phone" name = 'Phone' class="form-control" id="Phone" required dir ='auto' data-initial-dir='auto' placeholder = 'Enter your Number'>
+</div>
+<div class="mb-3 form-group">
+  <label for="Date" name ='Date' class="form-label">Date</label>
+  <input type="Date" name = 'Date' class="form-control" id="Date">
+</div>
+<div class="mb-3 form-group">
+  <label for="desc" class="form-label">Contact Reason</label>
+  <textarea class="form-control" name = 'desc' id="desc" rows="3"></textarea>
+</div>
+<button type ='submit' class = 'btn btn-primary'>Submit</button>
+
+
+
+</div>
+</form>
+
+{% endblock body %}
